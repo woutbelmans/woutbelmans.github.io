@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>encode.be – Automation & AI</title>
+  <style>
+    ::selection {
+      background-color: #e7e0c4;
+    }
+    body {
+      margin: 0;
+      background: #f8f4e6;
+      font-family: "Inter", sans-serif;
+      overflow-x: hidden;
+      color: #000;
+    }
+    header {
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .tagline {
+      margin-top: 6rem;
+      text-align: center;
+      font-size: 2.8rem;
+      line-height: 1.3;
+      font-weight: 600;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    .subtext {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards 0.4s;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px); }
+    }
+
+    .floating {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.08);
+      filter: blur(20px);
+      animation: float 10s infinite alternate ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translate(0,0); }
+      100% { transform: translate(60px, -40px); }
+    }
+
+    .cta-box {
+      margin: 4rem auto;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards 0.8s;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 1rem 2rem;
+      border: 2px solid #000;
+      background: transparent;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #000;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #000;
+      color: #f8f4e6;
+    }
+
+    .linkedin-icon {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="floating" style="top: 20%; left: 10%;"></div>
+  <div class="floating" style="bottom: 15%; right: 15%; animation-duration: 13s;"></div>
+
+  <header>
+    <div class="logo">encode.be</div>
+  </header>
+
+  <main>
+    <h1 class="tagline">Automation. AI. Future Workflows.</h1>
+    <p class="subtext">Een nieuwe, slimme manier van automatiseren komt eraan.</p>
+
+    <div class="cta-box">
+      <a href="https://www.linkedin.com" target="_blank" class="cta-button">
+        <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.7 2.6 4.7 6V24h-4v-8c0-1.9 0-4.3-2.6-4.3-2.6 0-3 2.1-3 4.2V24h-4V8z"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </main>
+</body>
+</html>
